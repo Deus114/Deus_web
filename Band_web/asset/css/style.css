@@ -19,11 +19,15 @@ html {
     background-color: black;
 }
 
-#nav {
-
+#nav, .subnav {
+    list-style-type: none;
 }
 
 #nav li {
+    position: relative;
+}
+
+#nav > li {
     display: inline-block;
 }
 
@@ -35,16 +39,36 @@ html {
     display: inline-block;
 }
 
-#nav li:hover a {
+#nav > li > a {
+    text-transform: uppercase;
+}
+
+#nav > li:hover > a, #nav .subnav li:hover a {
     color: black;
     background-color: #ccc;
-} 
+}
 
 #nav .subnav {
     display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} 
+
+#nav li:hover .subnav {
+    display: block;
 }
 
-/* BEGIN Header */
+#nav .subnav a {
+    color: black;
+    display: block;
+    padding: 0 12px;
+    line-height: 38px;
+}
+/* END Header */
 
 #slider {
 
