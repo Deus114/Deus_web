@@ -9,8 +9,12 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#main {
+.clear {
+    clear: both;
+}
 
+.text-white {
+    color: #fff !important;
 }
 
 /* BEGIN Header */
@@ -127,10 +131,95 @@ html {
 
 /* END Slider */
 
-#content {
-    height: 500px;
+/* BEGIN Content */
+#content .cont-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
+#content .sec-heading{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+#content .sec-sub-heading{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .sec-text {
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+/* BEGIN THE DCOD */
+#content .memlist {
+    margin-top: 48px;
+}
+
+#content .member-item {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+}
+
+#content .mem-img {
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+#content .mem-name {
+    font-size: 15px;
+}
+/* END THE DCOD */
+
+/* BEGIN Tour-section */
+#content .tour {
+    background-color: black;
+}
+
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.ticket-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: solid #ddd;
+}
+
+.soldout {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 20px;
+}
+
+.left {
+    float: right;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* END Tour-section */
+/* END Content */
 #footer {
   
 }
