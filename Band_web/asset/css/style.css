@@ -108,7 +108,7 @@ html {
     position: relative;
     margin-top: 46px;
     padding-top: 50%; /*50% chieu ngang cua chinh' no'*/
-    background: url('/Band_web/asset/img/slider1.jpg') top center / cover no-repeat;
+    background: url('/asset/img/slider1.jpg') top center / cover no-repeat;
 }
 
 #slider .text-content{
@@ -219,7 +219,57 @@ html {
     margin-top: -3px;
 }
 /* END Tour-section */
+
+/* BEGIN Place-list */
+.place-list {
+    margin: 32px -8px 48px;
+}
+.place-items {
+    float: left;
+    width: 33.333%;
+    height: 33.333%;
+    padding: 0 8px;
+}
+.place-img {
+    width: 256px;
+    height: 151px;
+    display: block;
+}
+.place-img:hover {
+    opacity: 0.6;
+}
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+}
+.place-heading {
+    font-size: 15px;
+    font-weight: bolder;
+}
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+.place-descr {
+    line-height: 1.4 px;
+    margin-top: 15px;
+}
+.buy-btn {
+    display: inline-block;
+    color: #fff;
+    margin-top: 15px;
+    text-decoration: none;
+    background-color: #000;
+    padding: 11px 16px;
+}
+.buy-btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+/* END Place-list */
+
 /* END Content */
 #footer {
-  
+
 }
