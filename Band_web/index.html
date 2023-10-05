@@ -88,7 +88,7 @@
                                 <h3 class="place-heading">Hà Nội</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy ticket</a>
+                                <button class="buy-btn js-buy-ticket">Buy ticket</button>
                             </div>
                         </div>
                         <div class="place-items">
@@ -97,7 +97,7 @@
                                 <h3 class="place-heading">Tp. Hồ Chí Minh</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy ticket</a>
+                                <button class="buy-btn js-buy-ticket">Buy ticket</button>
                             </div>
                         </div>
                         <div class="place-items">
@@ -106,7 +106,7 @@
                                 <h3 class="place-heading">Hải Phòng</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-descr">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy ticket</a>
+                                <button class="buy-btn js-buy-ticket">Buy ticket</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -121,9 +121,76 @@
         </div>
         <!-- END Content -->
 
+        <!-- BEGIN Footer -->
         <div id="footer">
             
         </div>
+        <!-- END Footer -->
+
+        <!-- BEGIN Modal buy ticket -->
+        <div class="js-modal">
+            <div class="js-modal-container">
+                <div class="js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+
+                <header class="modal-header">
+                    <i class="modal-hicon ti-bag"></i>
+                    Tickets
+                </header>
+
+                <div class="modal-body">
+                    <label for="how-many" class="modal-lable">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input id="how-many" type="text" class="modal-input" placeholder="How many?">
+
+                    <label for="m-email" class="modal-lable">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input id="m-email" type="text" class="modal-input" placeholder="Enter email...">
+
+                    <button id="buy-ticket">
+                        Pay
+                        <i class="ti-check"></i>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <p class="need-help">Need <a href="">help?</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- END Modal buy ticket -->
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+        const modal = document.querySelector('.js-modal')
+        const close = document.querySelector('.js-modal-close')
+        const modalContainer = document.querySelector('.js-modal-container')
+
+        function showModal() {
+            modal.classList.add('open')
+        }
+
+        function hideModal() {
+            modal.classList.remove('open')
+        }
+
+        for(const buyBtn of buyBtns){
+            buyBtn.addEventListener('click', showModal)
+        }
+
+        // Click vao X thi dong lai
+        close.addEventListener('click', hideModal)
+        // Click vao ben ngoai container cung dong lai
+        modal.addEventListener('click', hideModal)
+        modalContainer.addEventListener('click', function(event){
+            event.stopPropagation()
+        })
+    </script>
 </body>
 </html>
